@@ -1,0 +1,17 @@
+<div class="fundo">
+    <section class="login">
+        <header>
+            <img src="/assets/img/PomarPro (1).png">
+        </header>
+        <hr>
+        <form [formGroup]="form">
+            <input type="text" placeholder="Usuário" formControlName="usuario">
+            <input type="password" placeholder="Senha"formControlName="senha">
+            <p class="erro">{{msg_erro}}</p>
+            <button (click)="onLogin()">Entrar</button>
+        </form>
+        <footer>
+            <p>Desenvolvido por Tainara C. A. de Melo.</p>
+        </footer>
+            </section>
+</div>
