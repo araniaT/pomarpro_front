@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { UsuarioService } from '../../../services/usuario.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-cad-usuario',
@@ -10,7 +11,8 @@ import { UsuarioService } from '../../../services/usuario.service';
 export class CadUsuarioComponent {
 
 constructor(
-  private usuarioService:UsuarioService
+  private usuarioService:UsuarioService,
+  private snackbar: MatSnackBar
 ){
 
 }
@@ -40,15 +42,34 @@ let info =this.formulario.value;
 //Verifica se está inserindo ou alterando com base do valor 
 //do ID (se for null, está inserindo, se não está alterando)
  if(info.id == null){
-  //Irá inserir no banco de dados do usuário
+
   this.usuarioService.addUsuario(info).subscribe({
     next:(resposta)=>{
-      console.log(resposta)
+      console.log(resposta);
+       this.snackbar.open(
+        "Usuário adicionado com sucesso!",
+        "Ok",
+        {
+          verticalPosition:'top',
+          horizontalPosition:'end',
+          duration:3000
+        }
+       )
+       this.onCancelar()
     },
     error:(erro)=>{
-      console.log(erro)
-    }
-  })
+      console.log(erro);
+      this.snackbar.open(
+        "Oh não, algo aconteceu de errado!",
+        "Ok",
+        {
+          verticalPosition:'top',
+          horizontalPosition:'end',
+          duration:3000
+        }
+      
+  )
+}})
  }else{
   //Irá alterar o usuário do banco de dados
 
