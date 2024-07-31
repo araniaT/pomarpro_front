@@ -14,7 +14,7 @@ constructor(
   private usuarioService:UsuarioService,
   private snackbar: MatSnackBar
 ){
-
+  this.buscaUsuarios()
 }
 
 
@@ -84,7 +84,22 @@ this.formulario.reset();
 this.formulario.disable();
 }
 
+//Função para buscar as informações e usuários
 
+relatorio:any[] = [];
+
+buscaUsuarios(){
+  this.usuarioService.getUsuarios().subscribe({
+    next:(resposta)=>{
+      console.log(resposta);
+      this.relatorio = resposta.body;
+    },
+    error:(erro)=>{
+      console.log(erro);
+    }
+
+  })
+}
 
 
 }
