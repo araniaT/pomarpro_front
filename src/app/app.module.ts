@@ -16,6 +16,11 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule} from '@angular/material/snack-bar';
 import { MaterialComponent } from './material/material.component';
+import { ProdutoComponent } from './produto/produto.component';
+import { CadastroComponent } from './cadastro/cadastro.component';
+import { MovimentoComponent } from './movimento/movimento.component';
+import { ColheitaComponent } from './colheita/colheita.component';
+import { ArvoresComponent } from './arvores/arvores.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +29,12 @@ import { MaterialComponent } from './material/material.component';
     HomeComponent,
     MenuComponent,
     CadUsuarioComponent,
-    MaterialComponent
+    MaterialComponent,
+    ProdutoComponent,
+    CadastroComponent,
+    MovimentoComponent,
+    ColheitaComponent,
+    ArvoresComponent,
   ],
   imports: [
     BrowserModule,

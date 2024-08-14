@@ -1,0 +1,58 @@
+<app-menu></app-menu>
+<div class="pagina">
+   <header>
+        <h1> Administração | Cadastro de Produtos </h1>
+        </header>
+        <form [formGroup]="produto">
+            <div>
+            <mat-form-field appearance="outline" color="accent"> 
+                <mat-label>Descrição</mat-label>
+                <input matInput formControlName="descricao">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" color="accent"> 
+                <mat-label>Unid_medida</mat-label>
+                <input matInput formControlName="unid_medida" >
+            </mat-form-field>
+          </div>
+
+          <div>
+          <mat-form-field appearance="outline" color="accent"> 
+            <mat-label>Valor</mat-label>
+            <input matInput formControlName="valor">
+        </mat-form-field>
+        <mat-form-field appearance="outline" color="accent"> 
+            <mat-label>Tipo</mat-label>
+            <input matInput formControlName="tipo" >
+        </mat-form-field>
+    </div>
+
+
+      <div class="controles">
+        <button mat-raised-button [disabled]="produto.enabled"(click)="onIncluir()">Incluir</button>
+        <button mat-raised-button [disabled]="produto.invalid"(click)="onSalvar()">Salvar</button>
+        <button mat-raised-button [disabled]="produto.disabled"(click)="onCancelar()">Cancelar</button>
+        </div>
+        </form>
+        <div class="relatorio">
+        <h2>Produtos cadastrados </h2>
+        <table>
+            <tr>
+                <th>Ação</th>
+                <th>Descrição</th>
+                <th>Unid_medida</th>
+                <th>Valor</th>
+                <th>Tipo</th>
+            </tr>
+            <tr *ngFor=" let produto of relatorio ">
+                <td><button>Excluir</button></td>
+                <td>{{produto.descricao}} </td>
+                <td>{{produto.unid_medida}}</td>
+                <td>{{produto.valor}}</td>
+                <td>{{produto.tipo}}</td>
+               
+            </tr>
+        </table>    
+        </div> 
+</div>
+

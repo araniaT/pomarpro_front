@@ -1,0 +1,55 @@
+<app-menu></app-menu>
+<div class="pagina">
+   <header>
+        <h1> Administração | Cadastro de Colheitas </h1>
+        </header>
+        <form [formGroup]="colheita">
+            <div>
+            <mat-form-field appearance="outline" color="accent"> 
+                <mat-label>Quantidade</mat-label>
+                <input matInput formControlName="quantidade">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" color="accent"> 
+                <mat-label>Dt_colheita</mat-label>
+                <input matInput formControlName="dt_colheita" >
+            </mat-form-field>
+          </div>
+          <mat-form-field appearance="outline" color="accent"> 
+            <mat-label>Arvore_id</mat-label>
+            <input matInput formControlName="arvore_id" >
+        </mat-form-field>
+    
+
+    
+    <div class="controles">
+        <button mat-raised-button [disabled]="colheita.enabled"(click)="onIncluir()">Incluir</button>
+        <button mat-raised-button [disabled]="colheita.invalid"(click)="onSalvar()">Salvar</button>
+        <button mat-raised-button [disabled]="colheita.disabled"(click)="onCancelar()">Cancelar</button>
+        </div>
+        </form>
+        <div class="relatorio">
+        <h2>Cadastros de Colheitas</h2>
+        <table>
+            <tr>
+                <th>Ação</th>
+                <th>Quantidade</th>
+                <th>Dt_colheita</th>
+                <th>arvore_id</th>
+
+            </tr>
+            <tr *ngFor=" let colheita of relatorio ">
+                <td><button>Excluir</button></td>
+                <td>{{colheita.quantidade}} </td> <td> {{colheita.dt_colheita}}</td>
+                <td> {{colheita.arvore_id}}</td>
+                
+                
+            </tr>
+        </table>    
+        </div> 
+</div>
+
+
+    
+
+ 

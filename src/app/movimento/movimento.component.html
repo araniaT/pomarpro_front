@@ -1,0 +1,49 @@
+<app-menu></app-menu>
+<div class="pagina">
+   <header>
+        <h1> Administração | Cadastro de Movimentação </h1>
+        </header>
+        <form [formGroup]="movimento">
+            <div>
+            <mat-form-field appearance="outline" color="accent"> 
+                <mat-label>Dt_movimentação</mat-label>
+                <input matInput formControlName="dt_movimentacao">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" color="accent"> 
+                <mat-label>Tipo</mat-label>
+                <input matInput formControlName="tipo" >
+            </mat-form-field>
+          </div>
+
+          
+    
+    <div class="controles">
+        <button mat-raised-button [disabled]="movimento.enabled"(click)="onIncluir()">Incluir</button>
+        <button mat-raised-button [disabled]="movimento.invalid"(click)="onSalvar()">Salvar</button>
+        <button mat-raised-button [disabled]="movimento.disabled"(click)="onCancelar()">Cancelar</button>
+        </div>
+        </form>
+        <div class="relatorio">
+        <h2>Cadastros  Movimentação</h2>
+        <table>
+            <tr>
+                <th>Ação</th>
+                <th>Dt_movimentação</th>
+                <th>Tipo</th>
+                
+            </tr>
+            <tr *ngFor=" let movimento of relatorio ">
+                <td><button>Excluir</button></td>
+                <td>{{movimento.dt_movimentacao}} </td> <td> {{movimento.tipo}}</td>
+                
+                
+            </tr>
+        </table>    
+        </div> 
+</div>
+
+
+    
+
+   

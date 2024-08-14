@@ -1,0 +1,55 @@
+<app-menu></app-menu>
+<div class="pagina">
+   <header>
+        <h1> Administração de Cadastros </h1>
+        </header>
+        <form [formGroup]="cadastro">
+            <div>
+            <mat-form-field appearance="outline" color="accent"> 
+                <mat-label>Apelido</mat-label>
+                <input matInput formControlName="apelido">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" color="accent"> 
+                <mat-label>Num_linhas</mat-label>
+                <input matInput formControlName="num_linhas" >
+            </mat-form-field>
+          </div>
+
+          <div>
+          <mat-form-field appearance="outline" color="accent"> 
+            <mat-label>Num_colunas</mat-label>
+            <input matInput formControlName="num_colunas">
+        </mat-form-field>
+          </div>
+    <div class="controles">
+        <button mat-raised-button [disabled]="cadastro.enabled"(click)="onIncluir()">Incluir</button>
+        <button mat-raised-button [disabled]="cadastro.invalid"(click)="onSalvar()">Salvar</button>
+        <button mat-raised-button [disabled]="cadastro.disabled"(click)="onCancelar()">Cancelar</button>
+        </div>
+        </form>
+        <div class="relatorio">
+        <h2>Cadastros</h2>
+        <table>
+            <tr>
+                <th>Ação</th>
+                <th>Apelido</th>
+                <th>Num_linhas</th>
+                <th>Num_colunas</th>
+                
+            </tr>
+            <tr *ngFor=" let cadastro of relatorio ">
+                <td><button>Excluir</button></td>
+                <td>{{cadastro.apelido}} </td> <td> {{cadastro.num_linhas}}</td>
+                <td>{{cadastro.num_colunas}}</td>
+                
+                
+            </tr>
+        </table>    
+        </div> 
+</div>
+
+
+    
+
+   
