@@ -32,18 +32,20 @@
         <h2>Cadastros de Colheitas</h2>
         <table>
             <tr>
-                <th>Ação</th>
+                <th>Ação</th>       
+                 
                 <th>Quantidade</th>
                 <th>Dt_colheita</th>
-                <th>arvore_id</th>
+                <th>Código da árvore</th>
 
             </tr>
             <tr *ngFor=" let colheita of relatorio ">
                 <td><button>Excluir</button></td>
-                <td>{{colheita.quantidade}} </td> <td> {{colheita.dt_colheita}}</td>
+              
+                <td> {{colheita.quantidade}} </td> 
+                <td> {{colheita.dt_colheita}}</td>
                 <td> {{colheita.arvore_id}}</td>
-                
-                
+                            
             </tr>
         </table>    
         </div> 

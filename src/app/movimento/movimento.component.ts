@@ -43,7 +43,7 @@ export class MovimentoComponent {
         next:(resposta)=>{
           console.log(resposta);
            this.snackbar.open(
-            "Movimentaçãp adicionada com sucesso!",
+            "Movimentação adicionada com sucesso!",
             "Ok",
             {
               verticalPosition:'top',
@@ -96,5 +96,6 @@ export class MovimentoComponent {
     
       })
     }
+  
   
 }
