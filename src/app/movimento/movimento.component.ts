@@ -22,9 +22,9 @@ export class MovimentoComponent {
     //Inicializa o formulário
   movimento:FormGroup = new FormGroup ({
   id: new FormControl(null),
-  dt_movimentacao: new FormControl('',Validators.required),
   tipo: new FormControl('',Validators.required),
-  
+  produto: new FormControl('',Validators.required),
+  quantidade: new FormControl('',Validators.required),
   })
   
   onIncluir(){

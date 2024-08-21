@@ -6,13 +6,18 @@
         <form [formGroup]="movimento">
             <div>
             <mat-form-field appearance="outline" color="accent"> 
-                <mat-label>Dt_movimentação</mat-label>
-                <input matInput formControlName="dt_movimentacao">
-            </mat-form-field>
-
-            <mat-form-field appearance="outline" color="accent"> 
                 <mat-label>Tipo</mat-label>
                 <input matInput formControlName="tipo" >
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field appearance="outline" color="accent"> 
+                <mat-label>Produto</mat-label>
+                <input matInput formControlName="produto" >
+            </mat-form-field>
+            <mat-form-field appearance="outline" color="accent"> 
+                <mat-label>Quantidade</mat-label>
+                <input matInput formControlName="quantidade" >
             </mat-form-field>
           </div>
 
@@ -29,15 +34,18 @@
         <table>
             <tr>
                 <th>Ação</th>
-                <th>Dt_movimentação</th>
+                <th>Data de movimentação</th>
+                <th>Produto</th>
                 <th>Tipo</th>
+                <th>Quantidade</th>
                 
             </tr>
             <tr *ngFor=" let movimento of relatorio ">
                 <td><button>Excluir</button></td>
                 <td>{{movimento.dt_movimentacao}} </td> 
-                <td> {{movimento.tipo}}</td>
-                
+                <td>{{movimento.descricao}} </td> 
+                <td> {{movimento.ds_tipo}}</td>
+                <td> {{movimento.quantidade}}</td>
                 
             </tr>
         </table>    

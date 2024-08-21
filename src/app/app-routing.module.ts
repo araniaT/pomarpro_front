@@ -9,6 +9,7 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { MovimentoComponent } from './movimento/movimento.component';
 import { ColheitaComponent } from './colheita/colheita.component';
 import { ArvoresComponent } from './arvores/arvores.component';
+
 const routes: Routes = [
 
   {path:'',redirectTo:'login',pathMatch:'full'},
@@ -26,5 +27,6 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
+  
 })
 export class AppRoutingModule { }
