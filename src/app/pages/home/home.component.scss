@@ -1,0 +1,74 @@
+header{
+    height: 15vh;
+    h1{
+        font-size: 1.5em;
+    }
+}
+
+mat-form-field{
+    margin-right: 15px;
+    width: 20vw;
+}
+form{
+
+    height: 40vw;
+
+    width: 50vw;
+}
+.grande{
+    width: 40.8vw;
+}
+.controles{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: -37%;
+}
+
+.controles button{
+    margin-top: 6px;
+    width: 5vw;
+}
+
+.controles button:hover {
+    color:rgba(0, 0, 0, 0.849) ;
+    background-color:rgba(72, 255, 0, 0.849) ;
+
+     transition-duration: 1s;
+     cursor: help;
+ }
+
+ .detalhes{
+    border: 1px black solid;
+    margin: 0;
+    margin-top: 0%;
+    width: 80vh;
+    height: 105%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url(/assets/img/OIG2.jpeg);
+    background-size: cover;
+ }
+ .relatorio{
+    position: absolute;
+    margin-top:30%;
+    margin-left: 1%;
+    font-size: x-large;
+
+}
+.relatorio td{
+    padding-left: 20px;
+    padding-right: 30px;
+    border-top: 2px black solid;
+    border-bottom: 2px black solid;
+}
+.relatorio button{
+    margin-right: 20px;
+    background-color: green;
+}
+.txt{
+    font-style: italic;
+    font-family: 'Sprite Graffiti', sans-serif;
+    font-size: xx-large;
+}

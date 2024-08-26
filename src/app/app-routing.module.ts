@@ -10,6 +10,7 @@ import { MovimentoComponent } from './movimento/movimento.component';
 import { ColheitaComponent } from './colheita/colheita.component';
 import { ArvoresComponent } from './arvores/arvores.component';
 
+
 const routes: Routes = [
 
   {path:'',redirectTo:'login',pathMatch:'full'},
