@@ -23,12 +23,7 @@ public addHome(info:any):Observable<any>{
 //Função de busca de usuários
 
  
- 
- public getHomeS():Observable<any>{
-  return this.http.get('http://localhost:3000/home/buscaTodosS',
-    {observe:'response'}
-  )
- }
+
 
  public getHome():Observable<any>{
   return this.http.get('http://localhost:3000/home/buscaTodos',

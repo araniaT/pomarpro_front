@@ -1,35 +1,24 @@
 <app-menu></app-menu>
 <div class="pagina">
-    <header>
-       <div class="txt">
-        <h1>Bem vindo ao Pomar Pró!</h1>
-
-       </div>
-        <div class="detalhes">
-
-        </div>
-
-
-<div class="relatorio">
+  <header>
+    <h1>Bem vindo ao PomarPro!</h1>
+  </header>
+ 
+   <div class="relatorio">
     <h1>Estoque Atual</h1>
     <table>
-        <tr>
-            <th>Ação</th>
-            <th>Material</th>
-            <th>Quantidade</th>
+      <tr>
+        <th>Ação</th>
+        <th>Produto</th>
+        <th>Quantidade</th>
+      </tr>
+      <tr *ngFor="let home of relatorio">
+        <td><button>Excluir</button></td>
 
-        </tr>
-        <tr *ngFor="let home of relatorioTotal">
-            <td><button>Excluir</button></td>
-
-            <td>{{home.descricao}}</td>
-            <td>{{home.quantidade}}</td>
-
-        </tr>
-
-
-        <link href="https://fonts.cdnfonts.com/css/sprite-graffiti" rel="stylesheet">
-
-        <style>
-            @import url('https://fonts.cdnfonts.com/css/sprite-graffiti');
-    </style>
+        <td>{{ home.p_descricao }}</td>
+        <td>{{ home.quantidade }}</td>
+      </tr>
+    </table>
+    
+  </div>
+</div>
