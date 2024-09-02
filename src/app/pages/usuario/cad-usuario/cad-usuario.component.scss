@@ -9,9 +9,15 @@ mat-form-field{
      width: 300px;
 }
 
-button{
+button{  margin-right: 15px;
+    background-color: rgb(153, 219, 91);}
+
+.sair{
     margin-right: 15px;
     background-color: rgb(153, 219, 91);
+    &:disabled{
+        background-color: #CDCDCD;
+    }
 }
 
 .grande{

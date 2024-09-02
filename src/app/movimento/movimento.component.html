@@ -41,7 +41,7 @@
                 
             </tr>
             <tr *ngFor=" let movimento of relatorio ">
-                <td><button>Excluir</button></td>
+                <td><button class="sair" disabled>Excluir</button></td>
                 <td>{{movimento.dt_movimentacao}} </td> 
                 <td>{{movimento.descricao}} </td> 
                 <td> {{movimento.ds_tipo}}</td>

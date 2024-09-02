@@ -45,7 +45,7 @@
                 <th>Tipo</th>
             </tr>
             <tr *ngFor=" let produto of relatorio ">
-                <td><button>Excluir</button></td>
+                <td><button class="sair" disabled>Excluir</button></td>
                 <td>{{produto.descricao}} </td>
                 <td>{{produto.unid_medida}}</td>
                 <td>{{produto.valor}}</td>

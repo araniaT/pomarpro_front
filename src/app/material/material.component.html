@@ -44,7 +44,7 @@
                 <th>Tipo</th>
             </tr>
             <tr *ngFor=" let material of relatorio ">
-                <td><button>Excluir</button></td>
+                <td><button class="sair" disabled>Excluir</button></td>
                 <td>{{material.nome}} </td> <td> {{material.valor}}</td>
                 <td>{{material.fornecedor}}</td>
                 <td>{{material.tipo}}</td>

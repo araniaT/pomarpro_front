@@ -57,7 +57,7 @@
                         color: #ECF0F1;
                         
                         &:hover {
-                            color: #BDC3C7;
+                            color: #ffba3b;
                         }
                     }
                 }
@@ -81,5 +81,14 @@
             }
         }
     }
+ .home{ 
+  margin: 10px;
+    font-family: arial;
+    background-color: #73c02b;
+    font-size: large;
+    color: #ECF0F1;
+    border-radius: 5px;
+
+ }
 }
 
